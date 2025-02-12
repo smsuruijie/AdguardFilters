@@ -1,0 +1,29 @@
+{
+    "name": "@adguard/filters",
+    "version": "1.0.0",
+    "author": "AdGuard Software Ltd.",
+    "license": "GPL-3.0-only",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AdguardTeam/AdguardFilters.git"
+    },
+    "bugs": {
+        "url": "https://github.com/AdguardTeam/AdguardFilters/issues"
+    },
+    "homepage": "https://github.com/AdguardTeam/AdguardFilters#readme",
+    "scripts": {
+        "lint": "aglint",
+        "prepare": "node .husky/install.mjs"
+    },
+    "lint-staged": {
+        "*.txt": "aglint",
+        "*.md": "markdownlint"
+    },
+    "devDependencies": {
+        "@adguard/aglint": "2.1.3",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.4.3",
+        "markdownlint": "^0.37.4",
+        "markdownlint-cli": "^0.44.0"
+    }
+}
