@@ -8,22 +8,35 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
-!--- Temporary
-! https://github.com/AdguardTeam/AdguardForiOS/issues/255
-@@||m.beautypageants.in^$elemhide
-!---
+! https://github.com/AdguardTeam/AdguardFilters/issues/189769
+@@||benelph.de^$app=de.spiegel.android.app.spon
+! https://github.com/AdguardTeam/AdguardFilters/issues/169823
+!+ PLATFORM(ios, ext_android_cb)
+@@||d0o0d.com^$generichide
+!+ PLATFORM(ios, ext_android_cb)
+@@||do0od.com^$generichide
+!+ PLATFORM(ios, ext_android_cb)
+@@||megapornfreehd.com^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/164959
+nan-net.jp,nan-net.com#%#//scriptlet('remove-node-text', 'script', 'adblock')
+nan-net.jp,nan-net.com###adblock_guide_mask
+nan-net.jp,nan-net.com##.adblock_guide_box
+! nazology.kusuguru.co.jp,nijimen.kusuguru.co.jp anti-adb
+nazology.kusuguru.co.jp,nijimen.kusuguru.co.jp#%#//scriptlet('prevent-setTimeout', 'adBoxEl')
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=nazology.kusuguru.co.jp|nijimen.kusuguru.co.jp
+!+ PLATFORM(ios, ext_android_cb)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=nazology.kusuguru.co.jp|nijimen.kusuguru.co.jp
 ! Rules for AdFender to block injected ads when AdGuard DNS is active
 !+ PLATFORM(ios, ext_android_cb)
 ||chefkoch.de/magazin/sites/default/files/styles/*/public/media/image/*/*_*x*.jpg
-!
-! https://github.com/AdguardTeam/AdguardFilters/issues/114806
-eromanga-kishin.com#@#.ad_widget
+! https://github.com/AdguardTeam/AdguardFilters/issues/127712
+erozine.jp#%#//scriptlet("set-constant", "mobiles", "")
+!#if (adguard_app_ios || adguard_ext_android_cb)
+@@||spad.i-mobile.co.jp/script/adssp.js?$domain=erozine.jp
+@@||spad.i-mobile.co.jp/script/adcore_sp_inline*.js$domain=erozine.jp
+!#endif
 ! https://github.com/uBlockOrigin/uAssets/issues/10674
 @@||t7z.cupid.iqiyi.com/show2?$xmlhttprequest,domain=m.iqiyi.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/85017
-m.humoruniv.com#%#//scriptlet("set-constant", "NAVER_ADPOST_V2", "noopFunc")
-!+ PLATFORM(ios, ext_android_cb)
-@@||ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js$domain=m.humoruniv.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81517
 m.livehindustan.com#$#html { overflow: auto !important; }
 ||m.livehindustan.com^$cookie=lh_page_viewd
@@ -37,8 +50,6 @@ m.livehindustan.com#%#//scriptlet("prevent-addEventListener", "scroll", "adBlock
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32971
 !+ PLATFORM(ios, ext_android_cb)
 @@||usgamer.net^$generichide
-! https://github.com/AdguardTeam/AdguardFilters/issues/27586
-@@||js.kanald.com.tr/assets/dist/js/custom/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23913
 !+ PLATFORM(ios, ext_android_cb)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=anlink.top
@@ -78,18 +89,10 @@ wr.de,wp.de,nrz.de#@#.ad
 @@||static.expressbpd.com/rsjs/ads.js
 ! https://forum.adguard.com/index.php?threads/15378/
 @@||ads.dainikbhaskar.com/AdTech/ads/ads.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/3067
-delfi.ee#@#.adbanner
-delfi.ee#%#Object.defineProperty(window, 'adblock_detect_run', { get: function() { return true; } });
-! https://github.com/AdguardTeam/AdguardFilters/issues/23128
-! https://github.com/AdguardTeam/AdguardFilters/issues/3025
-food.ndtv.com,m.ndtv.com#@#.ad300
-food.ndtv.com,m.ndtv.com#%#Object.defineProperty(window, 'canRunAdsN', { get: function() { return false; } });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2506
 @@||m.timesofindia.com/ad-*.cms
 @@||m.timesofindia.com/*ads*.cms
 @@||b.scorecardresearch.com/beacon.js$domain=m.timesofindia.com
-@@||google-analytics.com/analytics.js$domain=m.timesofindia.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=m.timesofindia.com
 @@||static.chartbeat.com/js/chartbeat.js$domain=m.timesofindia.com
 @@||static.clmbtech.com^$domain=timesofindia.com,script
@@ -113,3 +116,64 @@ blogdoiphone.com#@#.custom-ad
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1709
 westseattleblog.com#@#.custom-ad
 westseattleblog.com#@#.header-ad
+!
+!
+! START: Yandex
+!
+! ya.ru - main page
+ya.ru##services-feed div.banner
+!
+! Yandex.Search
+! Update unblocking rule for the search ads in usefulads.txt
+yandex.*##div[class^="Direct "]
+ya.ru,yandex.*#$?##search-result > li:has(span:contains(/[PРeеkклaаmмaа]{7}/)) { remove: true; }
+ya.ru,yandex.*##.content__left > ul#search-result > li:has(> div.organic > div.OrganicTitle > a[href^="https://ya.ru/search/_crpd/"])
+!
+! Yandex.Images
+yandex.*##.justifier__col > div.incut
+yandex.*##.tiled-images__items > div[class*="rim-direct-incut"]
+!
+! Yandex.Video
+ya.ru,yandex.*#?#.SearchBlock:has(> div.DirectStripe)
+ya.ru,yandex.*##.DirectStripe
+yandex.*##div[id^="Direct"]
+yandex.*#?#.serp-list__items > div.block-search:has(> div.block-search__content > div[id^="Direct"])
+yandex.*#?#div[class$="-SnippetsFeed"] > div[class] + div[class$="Block"]:has(> div[class$="-BlockInner"] > div.DirectStripe)
+!
+! Yandex.Maps
+!
+! Yandex.Pogoda
+yandex.*##html > body div[id^="ADVERT"]
+yandex.*#?#div[class*="Advert"]
+!
+! Yandex.Mail
+mail.yandex.*##body div.direct
+!
+! Yandex.Market
+!
+! Yandex.Afisha
+afisha.yandex.*##.adfox-rubric-branding
+afisha.yandex.*##.afisha-profit-banner
+afisha.yandex.*#?#div[class^="WrapperAdfoxContainer"]
+afisha.yandex.*#?#div[style^="display:"]:matches-attr("/data[a-z0-9-]+/"="/^R-A-/")
+!
+! Yandex.Realty
+realty.ya.*##div[class^="IndexPage__underFiltersAd"]
+realty.ya.*#?#main > div[class^="Frame"]:has(> div[class*="PostBlocks__ad"])
+realty.ya.ru##.SearchResultsTopAdWithFixedHeight
+realty.ya.ru##.SitesSerp__ad
+realty.ya.ru##.OffersSerp__item_type_ad
+!
+! Yandex.Q
+[$path=/q]yandex.*#$?#body.page_qQuestionRoute div#page > div[class]:first-child > div[class]:first-child > section[class*=" "] > div[class] + div > div:not(:has(> div[id^="content-control-"])):not(:has(a[class])) { height: 0 !important; }
+[$path=/q]yandex.*#$?#body.page_qQuestionRoute div#page > div[class]:first-child > div[class]:first-child > section[class*=" "] > div[class] + div + div > div[class] > div:not(:has(> div[id^="content-control-"])):not(:has(a[class])) { height: 0 !important; }
+[$path=/q]yandex.*#$?#body.page_qArticleRoute div#page > div[class]:first-child > div[class]:first-child > section[class*=" "] > div[class] + div + div > span ~ div:not(:has(> div[class] button[data-role="button"] > svg)) { height: 0 !important; }
+!
+! Turbopages
+turbopages.org##div[class*="type_adfox"]
+turbopages.org##.turbo-advert
+turbopages.org##.page__result > div[class*="type_native"]
+!
+! END: Yandex
+!
+!

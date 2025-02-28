@@ -7,21 +7,19 @@
 !
 !
 !+ NOT_OPTIMIZED
+~kooapp.com##a[href^="https://kooapp.com/create?title="]
+!+ NOT_OPTIMIZED
 ~whatsapp.com##a[href^="whatsapp://send"]
 !+ NOT_OPTIMIZED
 ~facebook.com##a[href^="fb-messenger://share"]
 !+ NOT_OPTIMIZED
-~minutouno.com,~forcemajeure.com,~twitter.com##a[href^="https://twitter.com/intent/tweet?"]
-!+ NOT_OPTIMIZED
-~grapee.jp,~mdpr.jp,~howtogeek.com,~twitter.com##a[href^="https://twitter.com/intent/follow?"]
-!+ NOT_OPTIMIZED
 ~facebook.com##a[href*="//www.facebook.com/share.php"]
 !+ NOT_OPTIMIZED
-~animeworld.tv,~reflect.tech,~nrz.de##.share-button
+~nrz.de##.share-button
 !+ NOT_OPTIMIZED
 ##a[title="Share on LinkedIn"]
 !+ NOT_OPTIMIZED
-~twofactorauth.org,~twitter.com##a[href^="https://twitter.com/share"]
+~twitter.com,~x.com##a[href^="https://x.com/share"]
 !+ NOT_OPTIMIZED
 ~facebook.com##a[href^="https://www.facebook.com/dialog/share?"]
 !+ NOT_OPTIMIZED
@@ -31,7 +29,7 @@
 !+ NOT_OPTIMIZED
 ##.sharedaddy
 !+ NOT_OPTIMIZED
-~fd.nl,~mediafire.com##.share-twitter
+~mediafire.com##.share-twitter
 !+ NOT_OPTIMIZED
 ##.share-reddit
 !+ NOT_OPTIMIZED
@@ -41,12 +39,140 @@
 !+ NOT_OPTIMIZED
 ##.view_sns
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/144435
+##:not(#tab-sharing) > .sidebar-share
 ! https://github.com/AdguardTeam/AdguardFilters/issues/29853
 ~livelib.ru,~1password.com,~disqus.com##:not(.sharingOptionsGroup) > .share-menu
 !
+! wix.com websites
+##div[id^="post-social-actions_"]
+! note.* sites - popular in Japan
+##.o-actionControl__item.relative:nth-child(2)
+##.o-magazineFloatingSidebar__share
+##.o-magazineFloatingSidebar__socials
+##.m-shareSheet
+##.a-icon--share.o-actionControl__item--socialMobile
+##.p-article__articleWrapper ~ div.p-article__share
 ! hide share button in youtube player
 ##.ytp-share-button
+! X (formerly Twitter)
+~twitter.com,~x.com##a[href^="//x.com/share"]
+~twitter.com,~x.com##input.tweet
+~twitter.com,~x.com##a[href^="https://twitter.com/home/?"]
+~twitter.com,~x.com##a[href^="https://twitter.com/home?"]
+~twitter.com,~x.com##a[href^="https://x.com/home/?"]
+~twitter.com,~x.com##a[href^="https://x.com/home?"]
+##a[href^="https://x.com/intent/post?"]
+##button[aria-label="Share this article on X"]
+##a[href^="https://twitter.com/share"]
+##a[href^="https://twitter.com/intent/tweet?"]
+##a[href^="https://x.com/intent/tweet?"]
+##body .twitter-share-button
+##a[href^="https://twitter.com.com/share"]
+##a[href^="https://x.com/intent/tweet/?"]
+##a[onclick*="window.open"][onclick*="'https://twitter.com/intent/tweet?"]
+##a[onclick^="window.open('http://twitter.com/home?status"]
+##a[href^="https://twitter.com/intent/tweet/?"]
+##a[href^="https://www.twitter.com/intent/tweet?"]
+##a[href^="https://www.twitter.com/share"]
+##[title="Compartir en Twitter"]
+##[onclick^="window.open('https://x.com/intent/tweet"]
+##a[onclick^="window.open('https://x.com/share"]
+##[onclick^="window.open('https://twitter.com/intent/tweet"]
+##a[onclick^="window.open('https://twitter.com/share"]
+##a[href^="https://x.com/intent/retweet?tweet_id"]
+##a[href^="https://twitter.com/intent/retweet?tweet_id"]
+##a[onclick^="window.open ('http://www.twitter.com/share?url="]
+##a[onclick^="window.open('http://twitter.com/share"]
+##a[onclick^="window.open('//x.com/intent/tweet?url="]
+##a[onclick^="window.open('//twitter.com/intent/tweet?url="]
+##a[href^="//twitter.com/intent/tweet?"]
+##a[href^="//x.com/intent/tweet?"]
+##a[href^="http://www.twitter.com/home?"]
+##a[href^="http://www.twitter.com/share"]
+##a[href*="http://twitter.com/share"]
+##a[href^="http://twitter.com/?status="]
+##a[href^="http://twitter.com/home/?"]
+##a[href^="http://twitter.com/home?"]
+##a[href^="http://twitter.com/intent/tweet?"]
+##a[href^="http://www.twitter.com/intent/tweet?"]
+##a[href^="http://twitter.com/intent/tweet/?"]
 !
+##.cmg-share-bar
+##a[aria-label="View share options"]
+##.social-btn-list_mini
+##share-widget
+##a[href^="https://www.threads.net/intent/post?url"]
+##a[href^="https://bsky.app/intent/compose?text="]
+##.item_sns_list
+##a[href^="http://www.instapaper.com/hello2?url="]
+##a[href^="https://www.linkedin.com/feed/?shareActive="]
+##.sociaPayLasim
+##a[href^="https://lin.ee/"]
+##a[href^="https://facebook.com/sharer?"]
+###share-twitter
+###share-line
+##.entry-footer__share-title
+##.newsDetailAssets__sns
+##.shared-counts-wrap
+##.SocialShare
+##.powerkit_social_links_widget
+##.sharethis-inline-share-buttons
+~ok.ru##[onclick^="window.open('https://connect.ok.ru/offer?url="]
+##[onclick^="window.open('https://t.me/share/url?"]
+##a[href^="zaloshareext://shareext?"]
+##.btn_fly_share
+##.app_share_mod
+##.share-this-popover
+###video-share
+##.ct-share-box
+###abn-shares-buttons
+##.social-share-container
+##.video-share
+##.e-shared-sec
+##.t-shared-sec
+##.l-shared-sec-outer
+##.entry-social
+##a[href^="https://social-plugins.line.me/lineit/share?text="]
+##.social-share-block
+##.share-area > div.social-buttons
+##.fox-share
+##.post-share-float
+##div[data-widget-definition="share_page"]
+##.sharing__list
+##.piano-sns-container-share
+##.addthis_inline_share_toolbox
+##.comments-social-share
+##.redes-sociais
+##.post-share-bot
+##.share-tools-v2
+##div[data-testid="prism-share"]
+##.article-share-link
+##.m-amp-social
+##.social-share
+##.cs-entry__after-share-buttons
+###share_reddit
+###share_pinterest
+##.thb-social-top
+##.thb-social-buttons
+##.thb-social-footer
+##.mvp-alp-soc-list
+##.social-area-syncer
+##.kt_simple_share_container
+##[data-elfsight-social-share-buttons-options]
+###alt > div.share-content
+##.ts-share-bar
+##.idjs-webshareAction
+##a[title="Share by Email"]
+##.js-share-button
+##footer div.c-footer__share
+##.box-share
+##.counted-share-vertical
+##.si-share
+##.nws-share-group-td
+##.nws-share-txt-td
+##.jeg_share_float_container
+##.p-articleShare
 ##.idblog-social-share
 ~ycombinator.com##a[href^="https://news.ycombinator.com/submitlink?"]
 ~qq.com##a[href^="http://connect.qq.com/widget/shareqq/"]
@@ -75,9 +201,9 @@
 ##.likes-block_center
 ##.SocialMediaShareButton
 jp##.box-sns
-##a[onclick^="window.open('//twitter.com/intent/tweet?url="]
 ~ok.ru##a[onclick^="window.open('https://connect.ok.ru/dk?st.cmd=WidgetSharePreview"]
 ##button[aria-label="Share on Facebook"]
+##button[aria-label="Share on X(Twitter)"]
 ##button[aria-label="Share on Twitter"]
 ##nav.l-share
 ##.bdt-social-share
@@ -94,7 +220,6 @@ jp##.box-sns
 ##.pk-share-buttons-wrap
 ##.mh-social-nav
 ##a[href^="https://www.facebook.com/v2.8/dialog/share?"]
-~twitter.com##a[href^="https://www.twitter.com/intent/tweet?"]
 ###share_plz
 ##.sns-share
 ###selectShareContainer
@@ -105,6 +230,7 @@ jp##.box-sns
 ##a[href^="https://www.buttons.social/share/"]
 ##.jeg_share_top_container
 ##a[onclick^="window.open('http://reddit.com/submit?"]
+##a[onclick^="window.open('https://www.linkedin.com/sharing/"]
 ##a[href^="https://www.linkedin.com/sharing/"]
 ###sfsi_floater
 ~t.me,~telegram.org##a[onclick^="window.open('https://telegram.me/share/url?"]
@@ -130,7 +256,6 @@ jp##.box-sns
 ~naver.jp##a[href*="//line.naver.jp/R/msg/text/"]
 ##.btn-share
 ~facebook.com##[title="Compartir en Facebook"]
-~twitter.com##[title="Compartir en Twitter"]
 ##.share-toolbar__container
 ##.sharingfooter
 ##.share-toolbar
@@ -150,12 +275,14 @@ jp##.box-sns
 ~getpocket.com##a[onclick^="window.open('//getpocket.com/edit?url="]
 ~facebook.com##a[onclick^="window.open('https://www.facebook.com/sharer/sharer.php"]
 ~linkedin.com##a[onclick^="window.open('https://www.linkedin.com/shareArticle?"]
-~vk.com##a[onclick^="window.open('https://vk.com/share.php"]
+~vk.com##[onclick^="window.open('https://vk.com/share.php"]
 ~vk.com##a[onclick^="window.open('http://vkontakte.ru/share.php"]
 ##.share-fb
 ##.social-share-stumbleupon
 ##.td-post-sharing-bottom
+~line.me##a[href^="http://line.me/R/share?"]
 ~line.me##a[href^="https://line.me/R/share?"]
+##a[href^="http://line.me/R/msg/text?"]
 ##a[href^="https://line.me/R/msg/text/"]
 ##.meta-share-wrapper
 ##a[onclick^="ShareOn"]
@@ -193,7 +320,7 @@ jp##.box-sns
 ##.redes-sociales
 ~github.com,~feedly.com##a[href^="http://feedly.com/i/subscription/"]
 ~github.com,~feedly.com##a[href^="https://feedly.com/i/subscription/"]
-~vkrugudruzei.ru##a[href^="http://vkrugudruzei.ru/x/button?url="]
+##a[href^="http://vkrugudruzei.ru/x/button?url="]
 ~hatena.com##.social-hatena
 ##.jw-sharing-dock-btn
 ##.dpsp-total-share-wrapper
@@ -232,6 +359,7 @@ jp##.box-sns
 ##.element_social
 ##.sosyal_buton
 ###fink_icon_paylas
+href^="https://facebook.com/sharer?u=
 ~facebook.com##a[href^="https://facebook.com/sharer/sharer.php?"]
 ##a[href^="//www.linkedin.com/shareArticle?"]
 ##a[href^="//www.stumbleupon.com/submit?url="]
@@ -278,7 +406,7 @@ jp##.box-sns
 ##.addthis-smartlayers-desktop
 ##.addthis-smartlayers
 ~baby.ru##.article-sharing
-~facebook.com##a[href^="http://www.facebook.com/plugins/like.php"]
+~facebook.com##a[href^="https://www.facebook.com/plugins/like.php"]
 ##a[href^="https://www.xing-share.com/app/user?op=share;"]
 ##.sparkling-social
 ##.bt-social-share-button
@@ -290,12 +418,12 @@ jp##.box-sns
 ##.mvp-post-soc-twit
 ~wykop.pl##a[href^="http://www.wykop.pl/dodaj/link/url,"]
 ##.social_media_buttons
-~banki.ru##.article-share
+~nexushub.co.za,~banki.ru##.article-share
 ##.whatsapp-share
 ~facebook.com##a[href^="http://www.facebook.com/dialog/feed?"]
 ~yandex.ru##a[href^="https://share.yandex.ru/go.xml?service="]
 ##.nc_socialPanel
-~indiegogo.com##.share-icon
+~pressdigital.es,~immersive-fox.com,~indiegogo.com##.share-icon
 ~accounts.stella-it.com,~nikkansports.com,~la7.it,~bluedart.com,~thehackernews.com##.social-box
 ~pinterest.com##a[href^=" https://pinterest.com/pin/create/link/?"]
 ###cm-social-overlay
@@ -305,7 +433,7 @@ jp##.box-sns
 ###wpbfsb
 ##.share_box
 ##.share_article
-##.article_share
+~pressdigital.es##.article_share
 ~xpressengine.com##.btn_share
 ~ok.ru##a[href^="https://ok.ru/dk?st.cmd=addShare"]
 ~ok.ru##a[href^="http://www.ok.ru/dk?st.cmd=addShare"]
@@ -350,7 +478,7 @@ jp##.box-sns
 ###facebook_soc_button
 ###facebooktrend
 ###fb-friends-recent-activity
-~frekvence1.cz,~kpt.kyiv.ua,~roblox.com,~facebook.com,~filmixru.ru,~junodownload.com,~king.com,~myshared.ru,~petsplace.nl,~thefurnish.ru###fb-root:not(body):not(html)
+~viralomania.com,~akyatirim.com.tr,~isitdownrightnow.com,~frekvence1.cz,~kpt.kyiv.ua,~roblox.com,~facebook.com,~junodownload.com,~king.com,~myshared.ru,~petsplace.nl,~thefurnish.ru###fb-root:not(body):not(html)
 ###fbLikeButton
 ~facebook.com###fb_groups
 ###fb_iframe_widget
@@ -387,7 +515,7 @@ jp##.box-sns
 ###share-buttons
 ###share-cerceve
 ###share-container
-~oo-software.com###share-facebook
+###share-facebook
 ###share-holder
 ###share-links
 ###share-pinterest
@@ -543,7 +671,7 @@ livejournal.com##.b-ljtimes-wrapper
 ##.buttons_share
 ##.c-shareBtns
 ##.c-social-likes
-~vidcloud.co##.content-share
+##.content-share
 ##.contentSocialBar
 ##.convosharebuttons
 ##.crafty-social-buttons
@@ -556,12 +684,12 @@ livejournal.com##.b-ljtimes-wrapper
 ~science-et-vie.com##.entry-share
 ##.essb_links
 ##.essb_share
-~sleduizamnoi.com,~philosophia-perennis.com##.et_social_facebook
-~sleduizamnoi.com,~philosophia-perennis.com##.et_social_icons_container
-~sleduizamnoi.com,~philosophia-perennis.com##.et_social_networks
+~philosophia-perennis.com##.et_social_facebook
+~philosophia-perennis.com##.et_social_icons_container
+~philosophia-perennis.com##.et_social_networks
 ~philosophia-perennis.com##.et_social_pinterest
 ##.et_social_sidebar_networks
-~sleduizamnoi.com,~philosophia-perennis.com##.et_social_twitter
+~philosophia-perennis.com##.et_social_twitter
 ##.etsy-pin-it
 ##.etsy-tweet
 designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-facebook
@@ -610,21 +738,17 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.gplus-like-button
 ##.gs-share
 ##.hdsocial2
-~dzfoot.com,~joinfo.ua,~gardenista.com,~sinemia.com,~9to5google.com,~9to5mac.com,~9to5toys.com,~electrek.co##.header-social
+~from-ua.com,~dzfoot.com,~joinfo.ua,~gardenista.com,~sinemia.com,~9to5google.com,~9to5mac.com,~9to5toys.com,~electrek.co##.header-social
 ~codepen.io##.heart-button
 ##.heart-it-button
 ##.help-social-buttons
 ##.i_v_fb_like
 ##.icon-digg
-~usepanda.com,~rottentomatoes.com,~detaykibris.com,~khabaronline.ir,~programme-tv.net,~mvideo.ru,~neoldu.com,~akhisarhaber.com,~nauchpoint.com,~bilecikhaber.com.tr,~canliradyodinle.web.tr,~dawanda.com,~godmode-trader.de,~infranken.de,~apkmirror.com,~ain.ua,~iguides.ru,~logaster.com,~minfin.com.ua,~pexels.com##.icon-gplus
-~gidasanayim.com,~leitesculinaria.com,~androidpolice.com,~tokyohive.com,~teknolojioku.com,~entrepreneur.com,~weather.com,~t3n.de##.icon-google-plus
-~7media.md,~vogue.in,~a-da-co-da.com,~beringtime.com,~allthingshair.com,~sunexpress.com,~autoscout24.de,~gardenista.com,~g2a.com,~dawanda.com,~budapester.com,~volvic.de,~wunderweib.de,~7up.com,~gofeminin.de,~pexels.com##.icon-pinterest
-~kaspersky.com,~kaspersky.be,~kaspersky.co.uk,~kaspersky.de,~kaspersky.dk,~kaspersky.es,~kaspersky.fr,~kaspersky.it,~kaspersky.nl,~kaspersky.no,~kaspersky.pt,~kaspersky.se,kaspersky.ru,~babla.co.id,~gidasanayim.com,~morfikirler.com,~gdata-software.com,~thehackernews.com,~nokia.com,~ozracing.com,~mobillsapp.com,~dailycaller.com,~siemens.com,~basf.com,~webref.ru##.icon-linkedin
 ~rottentomatoes.com,~slashdot.org##.icon-facebook-squared
 ##.icon-pinterest-share
 ~alternativeto.net,~gog.com##.icon-reddit
 ##.icon-stumbleupon
-~sportnews.to,~dailymail.co.uk##.img-share
+~dailymail.co.uk##.img-share
 ##.img__sharer
 ##.inline_socials
 ##.j_social_share
@@ -652,14 +776,14 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.mod-stay-connected
 ##.mom-social-share
 ##.mvp_facebook_widget
-~2x2tv.ru,~teamspeak.com,~moneycanbuylipstick.com,~babeljs.io,~slashdot.org##.nav-social
+~2x2tv.ru,~teamspeak.com,~moneycanbuylipstick.com,~babeljs.io,~slashdot.org##.nav-social:not(body):not(html)
 ##.newGigyaShare
 ##.news_social_button
 ~ok.ru##.odkl-share-oc
 ~ok.ru##.odkl-share-oc-fc
 ~ok.ru##.odkl-share_button
 ##.p-button-social
-~vidcloud.co##.page-share
+##.page-share:not(body)
 ##.page-share-button
 ~kamuajans.com##.page-social
 ##.pin-it-button
@@ -711,12 +835,10 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.share-icons-box
 ##.share-icons-sticky-box
 ##.share-icons-wrap
-~ultimateclassicrock.com,~screencrush.com,~technopoint.ru,~dns-shop.ru,~pinksluts.com,~businessinsider.com,~popcrush.com,~tasteofcountry.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.kz,~disk.yandex.ru,~disk.yandex.ua##.share-link
-~imgur.com,~thegameawards.com,~my.kaspersky.com##.share-links
-~pan.baidu.com##.share-list
+##.share-list
 ##.share-on-facebook
 ##.share-on-twitter
-~grammarly.com,~youtube.com##.share-panel
+##.share-panel
 ##.share-pictures-overlay
 ##.share-proposal
 ##.share-regular
@@ -735,14 +857,14 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~soundcloud.com##.shareContent
 ##.shareLinks
 ##.shareSocialArticle
-##.shareThis
+##body .shareThis
 ##.shareThis__cue
 ##.shareThis__wrapper
 ##.shareWrapper
 ##.share__button
 ##.share__buttons
 ##.share_absolute
-~chip.com.tr##.share_bar
+##.share_bar
 ##.share_block
 ##.share_btns
 ~joyreactor.cc,~reactor.cc,~jrproxy.com,~jr-proxy.com##.share_buttons
@@ -779,13 +901,12 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.side-social-links
 ##.sideBarShare
 ##.sideSocial
-##.sidebar-share
 ##.single-post-sharing-button
 ~skype.com##.skype-share
 ##.soc-button
 ~vesti.ru##.soc-buttons
 ##.soc-likes
-~rbc.ua,~spcs.me##.soc-links
+~rbc.ua##.soc-links
 ##.soc24
 ##.socBmFb
 ##.socBmTw
@@ -802,11 +923,11 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.sociable
 ~hurriyet.com.tr,~patriots.com,~seahawks.com##.social-bar
 ##.social-bar-wrapper
-~voltimum.com.tr,~nippononline.ru,~honor.ru,~sportsgrid.com,~gazeteduvar.com.tr##.social-block
+##.social-block
 ##.social-block-div
 ##.social-block-links
 ##.social-block-share
-~chip.com.tr##.social-button-small
+##.social-button-small
 ##.social-button_holder
 ~m.bazonline.ch,~github.com##.social-count
 ~gizguide.com##.social-count-plus
@@ -815,12 +936,11 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.social-horizontal
 ~sports.ru##.social-icons-big
 ##.social-icons-widget
-~yogajournal.ru,~kinogo-2016.net##.social-likes
+~yogajournal.ru##.social-likes
 ##.social-likes_single-w
 ##.social-line
 ##.social-links-tooltip
 ##.social-love
-~healthyplace.com,~vavtv.com.tr,~beerwulf.com,~ikea.com.tr,~consequenceofsound.net,~polishbrief.pl,~geckoandfly.com,~bemares.pl,~calvinklein.de,~fitforfun.de,~hosting.1und1.de,~macrumors.com##.social-media
 ##.social-media-box
 ##.social-media-iframe
 ~rubaltic.ru,~ansa.it,~browserstack.com##.social-menu
@@ -830,7 +950,6 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.social-roll
 ~norton.com##.social-row
 ##.social-service
-~daenischesbettenlager.at,~jablickar.cz,~daenischesbettenlager.de,~jysk.al,~jysk.am,~jysk.ba,~jysk.be,~jysk.bg,~jysk.by,~jysk.ca,~jysk.co.id,~jysk.co.uk,~jysk.com,~jysk.com.cy,~jysk.com.kw,~jysk.com.mt,~jysk.ch,~jysk.cz,~jysk.dk,~jysk.ee,~jysk.es,~jysk.fi,~jysk.fr,~jysk.ge,~jysk.gr,~jysk.hr,~jysk.hu,~jysk.ie,~jysk.it,~jysk.kz,~jysk.lt,~jysk.lv,~jysk.nl,~jysk.md,~jysk.me,~jysk.mk,~jysk.no,~jysk.pl,~jysk.pt,~jysk.ro,~jysk.rs,~jysk.se,~jysk.si,~jysk.sk,~jysk.ua,~jysk.vn,~jysk-ks.com,~jyskthailand.com,~pisiffik.gl,~rumfatalagerinn.is,~skemman.fo,~energyfm.ru,~howtogeek.com##.social-share
 ##.social-share-bar
 ##.social-share-buttons
 ##.social-share-buttons-block
@@ -842,8 +961,8 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.social-share-widget
 ##.social-share-wrapper
 ##.social-shares
-~bosco.ru,~cosmo.ru,~home.nest.com##.social-sharing
-~iphonehacks.com##.social-sidebar
+~minhavida.com.br,~bosco.ru,~cosmo.ru,~home.nest.com##.social-sharing
+##.social-sidebar
 ##.social-sidebar-wrap
 ##.social-sitewide
 ##.social-sticky
@@ -860,7 +979,6 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~medialeaks.ru##.social-widgets
 ##.social-widgets-in
 ~gazetaby.com,~journey.cloud,~howtogeek.com,~dunyavegercekler.com##.social-wrapper
-~animeworld.tv##.social2
 ##.social4iv
 ~biletyplus.ru,~mousehuntgame.com##.socialButtons
 ##.socialContainer
@@ -927,11 +1045,11 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.st_stumbleupon_large
 ##.st_twitter_hcount
 ##.st_twitter_large
-~fstoppers.com##.sticky-shares
+##div.sticky-shares
 ##.stumbleupon
 ##.surfinbird__like_button
 ##.td-post-sharing
-##.the_champ_sharing_container
+##body .the_champ_sharing_container
 ~savunmasanayisi.com,~freecoursesite.com##.top-share
 ##.topic_share
 ##.track-soccontrols
@@ -943,7 +1061,7 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.vce-share-bar
 ##.viral-button-pinterest
 ##.vjs-social-share
-~shikimori.one,~shikimori.org,~vk.com,~vkontakte.ru##.vk-like
+~shikimori.*,~vk.com,~vkontakte.ru##.vk-like
 ##.vk-like-button
 ~vk.com,~vkontakte.ru##.vk_share_button
 ##.w2bslikebox
@@ -971,7 +1089,6 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~ok.ru##a.odkl-klass-s
 ~ok.ru##a.odkl-klass-stat
 ##a[href="http://del.icio.us/post"]
-~twitter.com##a[href*="http://twitter.com/share"]
 ~addtoany.com##a[href="http://www.addtoany.com/share_save"]
 ~addtoany.com##a[href="https://www.addtoany.com/share"]
 ~facebook.com##a[href="http://www.facebook.com/sharer.php"]
@@ -993,7 +1110,7 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~reddit.com##a[href^="http://reddit.com/submit?url="]
 ~reddit.com##a[href^="https://ru.reddit.com/submit"]
 ~reddit.com##a[href^="https://www.reddit.com/submit"]
-~reddit.com##a[href^="https://reddit.com/submit?"]
+~reddit.com##a[href^="https://reddit.com/submit"]
 ~facebook.com##a[href^="https://facebook.com/share.php?u="]
 ~facebook.com##a[href^="http://facebook.com/share.php?"]
 ~facebook.com##a[href^="http://facebook.com/sharer.php?"]
@@ -1004,19 +1121,11 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~pinterest.com##a[href^="http://pinterest.com/pin/create/link/"]
 ~plus.google.com##a[href^="http://plus.google.com/share"]
 ~weibo.com##a[href^="http://service.weibo.com/share/share.php"]
+~weibo.com##a[href^="https://service.weibo.com/share/share.php"]
 ~yandex.ru##a[href^="http://share.yandex.ru/go.xml?service="]
 ~technorati.com##a[href^="http://technorati.com/faves?add="]
-~twitter.com##a[href^="http://twitter.com/?status="]
-~twitter.com##a[href^="http://twitter.com/home/?"]
-~twitter.com##a[href^="http://twitter.com/home?"]
-~twitter.com##a[href^="//twitter.com/intent/tweet?"]
-~twitter.com##a[href^="http://twitter.com/intent/tweet?"]
-~twitter.com##a[href^="http://www.twitter.com/intent/tweet?"]
-~twitter.com##a[href^="https://twitter.com/intent/tweet/?"]
-~twitter.com##a[href^=" https://twitter.com/share"]
-~twitter.com##a[href^="http://twiter.com/share?"]
 ~vk.com,~vkontakte.ru##a[href^="http://vkontakte.ru/share.php"]
-~yandex.by,~yandex.com,~yandex.kz,~yandex.ru,~yandex.ua##a[href^="http://wow.ya.ru/posts_share_link.xml"]
+~yandex.by,~yandex.com,~yandex.kz,~yandex.ru##a[href^="http://wow.ya.ru/posts_share_link.xml"]
 ~digg.com##a[href^="http://www.digg.com/submit?"]
 ~facebook.com##a[href^="http://www.facebook.com/sharer.php?"]
 ~facebook.com##a[href^="http://www.facebook.com/sharer/sharer.php"]
@@ -1034,8 +1143,6 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~stumbleupon.com##a[href^="http://www.stumbleupon.com/submit?url"]
 ~tumblr.com##a[href^="http://www.tumblr.com/share"]
 ~tumblr.com##a[href^="https://www.tumblr.com/share"]
-~twitter.com##a[href^="http://www.twitter.com/home?"]
-~twitter.com##a[href^="http://www.twitter.com/share"]
 ##a[href^="//connect.mail.ru/share"]
 ##a[href^="https://connect.mail.ru/share"]
 ~facebook.com##a[href^="https://facebook.com/sharer.php?"]
@@ -1045,22 +1152,17 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~google.com##a[href*="//plusone.google.com/_/+1/confirm?"]
 ##a[href^="https://share.flipboard.com/bookmarklet/"]
 ~yandex.ru##a[href^="https://share.yandex.net/go.xml?service="]
-~twitter.com##a[href^="https://twitter.com/home/?"]
-~twitter.com##a[href^="https://twitter.com/home?"]
-~twitter.com##a[href^="https://twitter.com/intent/retweet?tweet_id"]
 ~minutouno.com,~facebook.com##a[href^="https://www.facebook.com/dialog/feed?"]
-~facebook.com##a[href*="https://www.facebook.com/sharer.php"]
+~facebook.com##a[href^="https://www.facebook.com/sharer.php"]
 ~forcemajeure.com,~facebook.com##a[href^="https://www.facebook.com/sharer/sharer.php"]
 ~google.com##a[href^="https://www.google.com/bookmarks/mark?"]
 ##a[href^="https://www.linkedin.com/cws/share?"]
 ~linkedin.com##a[href^="https://www.linkedin.com/shareArticle"]
 ~livejournal.com##a[href^="https://www.livejournal.com/update.bml"]
 ~ok.ru##a[href^="https://www.odnoklassniki.ru/dk?st.cmd=addShare"]
-~pinterest.com##a[href^="https://www.pinterest.com/pin/create/button"]
-~pinterest.com##a[href^="//www.pinterest.com/pin/create/button"]
 ~stumbleupon.com##a[href^="https://www.stumbleupon.com/submit?url="]
+##a[href^="https://tumblr.com/widgets/share/"]
 ##a[href^="https://www.tumblr.com/widgets/share/"]
-~twitter.com##a[href^="https://www.twitter.com/share"]
 ##a[href^="https://www.xing.com/social_plugins/share"]
 ##a[href^="https://www.xing.com/spi/shares/new?url="]
 ~facebook.com##a[name="fb_share"]
@@ -1068,26 +1170,19 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~facebook.com##a[onclick*="//www.facebook.com/"][onclick*="sharer.php"]
 ##a[href^="javascript:window.open('http://www.facebook.com/sharer.php"]
 ~facebook.com##a[onclick^="window.open ('http://www.facebook.com/sharer.php"]
-~twitter.com##a[onclick^="window.open ('http://www.twitter.com/share?url="]
-~twitter.com##a[onclick^="window.open ('https://twitter.com/intent/tweet?"]
-~twitter.com##a[onclick^="window.open('http://twitter.com/home?status"]
-##a[onclick^="window.open('http://twitter.com/share"]
 ~vk.com##a[onclick^="window.open('http://vk.com/share.php"]
 ~facebook.com##[onclick^="window.open('http://www.facebook.com/share.php?"]
 ~facebook.com##[onclick^="window.open('https://www.facebook.com/share.php?"]
 ##a[onclick^="window.open('http://www.facebook.com/sharer.php"]
 ##a[onclick^="window.open('http://www.odnoklassniki.ru/dk?st.cmd=addShare"]
-~twitter.com##[onclick^="window.open('https://twitter.com/intent/tweet"]
-~twitter.com##a[onclick^="window.open('https://twitter.com/share"]
 ~facebook.com##a[onclick^="window.open('https://www.facebook.com/sharer.php"]
-##a[onlick*="https://www.facebook.com/sharer/"]
+##a[onclick*="https://www.facebook.com/sharer/"]
 ##a[target="socialbookmark"]
 ~theage.com.au##a[title="Share on Facebook"]
 ##a[title="share on Facebook"]
 ##a[title="Share on Pinterest"]
 ~theage.com.au##a[title="Share on Twitter"]
 ##a[title="share on Twitter"]
-~twitter.com##body .twitter-share-button
 ~pinterest.com##body div a[class*="pin_it_button"]
 ##button[title="Share on Facebook"]
 ##button[title="Share on Twitter"]
@@ -1101,25 +1196,22 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ~vk.com,~vkontakte.ru##div[id^="vk_like"]
 ##ebayShare_2
 ~livejournal.com,~lj.com##form[action*="livejournal.com/update.bml"]
-~twitter.com##input.tweet
 ~vk.com,~vkontakte.ru##input.vk
 !
-~cyworld.com##a[href^="http://csp.cyworld.com/bi/bi_recommend_pop.php?"]
 ~story.kakao.com###kakaostory-follow-button
 ~story.kakao.com###kakaostory-share-button
-~story.kakao.com##a[href^="https://story.kakao.com/s/share?url="]
-~story.kakao.com##a[href^="https://story.kakao.com/share?url="]
 ###kakao-link-btn
 ###kakao-story-btn
 ###news_sns
 ###share_kakaostory
 ##.share-kakaotalk
-~blog.naver.com##a[href^="http://blog.naver.com/openapi/share?url="]
-~blog.naver.com##a[onclick^="window.open('http://blog.naver.com/openapi/share?url="]
-~blog.naver.com##a[onclick^="javascript:window.open('http://share.naver.com/web/shareView.nhn?"]
+~naver.com##a[href*="//share.naver.com/"]
+~naver.com##a[onclick*="//share.naver.com/"]
 ##a[href*="//line.me/R/msg/text/?"]
-~band.us##a[onclick^="window.open('http://www.band.us/plugin/share?"]
-~band.us##a[href^="http://www.band.us/plugin/share?"]
+~band.us##a[onclick*="//band.us/plugin/share?"]
+~band.us##a[href*="//band.us/plugin/share?"]
+~band.us##a[onclick^="bandapp://create/post"]
+~band.us##a[href^="bandapp://create/post"]
 ##.tt-plugin.tt-share-entry-with-sns
 ##.to_sns.rd_nav
 ###bottomsns

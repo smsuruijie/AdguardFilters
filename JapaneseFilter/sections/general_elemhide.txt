@@ -5,96 +5,84 @@
 ! Bad: example.org##.adv (should be in specific.txt)
 !
 !
+##.full-tab > div.full-right-col
+##.__isboostReturnAd
+##.__uz__third_party_ad
 ##._popIn_infinite_ad
 ##._popIn_infinite_video
+##._popIn_recommend_ad_section
 ##._popIn_recommend_article_ad
 ##._popIn_recommend_article_ad_reserved
 ##.google-afc-image
-###ADInterest
-###BottomAd
-###TopAd
-###ad-giftext
+###ad-60days-area
 ###ad-recommend
-###ad-right
-###ad_04
-###ad_large
-###adsSPRBlock
-###ads_horizontal
+###fc2_bottom_bnr
 ###float-bnr
 ###fluct-pc-sticky-ad
+###footerafficode
 ###geniee_overlay_outer
+###headerafficode
 ###id_ads_enc
 ###im_panel
+###im_panel_pc
+###im_panel_pc_left
 ###kauli_yad_1
 ###kauli_yad_2
 ###kauli_yad_3
 ###kauli_yad_4
+###meerkat-contents
 ###ninja-blog-inactive
 ###overlay-ad-div-id
+###prtaglink
 ###seesaa-bnr
-###self-ad
 ###trackword_banner
-##.AdGraph
-##.AffAD
 ##.NinjaEntryCommercial
-##.ad-text-blockA01
-##.ad-text-blockB01
-##.ad-textG01
+##.ad-single-h2
+##.ad_splify
 ##.ad1-title
-##.adArticleRecommend
-##.adArticleSidetile
-##.adArticleTopText
-##.adBrandpanel
-##.adCentertile
-##.adEmployment
-##.adHeaderAdbanner
-##.adIMm
 ##.adPost
-##.adRecommendRight
-##.adSidetileplus
+##.ad_overlay
 ##.adarea-box
-##.ad_keywords_bot
-##.ad_keywords_bot_r
-##.ad_regular1
-##.ad_regular2
-##.ad_regular3
-##.ad_special_badge
-##.ad_textlink_box
-##.ad_thumbnail_header
-##.adbox
+##.adboxcontainer_t
 ##.adgoogle
-~hgh14x.com##.adlist
+##.adgoogle-wrapper
 ##.admax-ads
-##.adrect
-##.ads-by-google-0
-##.ads_entrymore
-##.adsense-image-detail
-##.adsense-topics-detail
-##.adsense_box01
-##.adsense_mainbox01
-##.adsize728
-~regionxeberleri.com##.adtitle
-##.aoa_overlay
+##.ads-flexbox
+##.advrbox
 ##.archive__item-infeedPc1
 ##.archive__item-infeedPc2
 ##.archive__item-infeedPc3
 ##.archiveItem-infeed
 ##.archiveList-infeed
 ##.blogroll-ad-text
+##.blogroll_ads
+##.bns-bl
 ##.c-infeedAd
+##.csw_non_search_ad_block_2
 ##.diver_widget_adarea
+##.double-rectangle
+##.fujoho_custom_banner
 ##.ggbox
+##.google-2ad
+##.google-2ad-a
+##.google-2ad-b
+##.google-2ad-c
+##.google-2ad-f
+##.google-2ad-h
+##.google-2ad-m
+##.google-2ad-mid
+##.google-user-ad-728
 ##.google-user-ad-side1
 ##.i2i-content-bottom
 ##.i2i-content-middle
 ##.i2i-content-top
 ##.i2i-header
 ##.insentence-adsense
-##.insentense-adsense
-##.interstitial-ad
-##.ise-ad.csw-content-box
+##.insentence-adsense2
+##.invalid + .rakko_area
 ##.itiran-ad
 ##.js-kb-click
+##.logly-lift-ad-ad
 ##.master-post-advert
 ##.my_ads
 ##.p-entry__ad
@@ -105,6 +93,8 @@
 ##.seesaa-cmn__pr
 ##.sherpa-component[data-ad_type]
 ##.side_widget_surfing_adsense_widget
+##.sleeping-ad-in-entry
+##.sleeping-ads
 ##.sponsor-h2-center
 ##.sponsor-top
 ##.st-h-ad
@@ -114,23 +104,67 @@
 ##.veu_insertAds
 ##.widget_common_ad
 ##.widget_fit_aditem_class
+##.widget_mobile_ad
+##.widget_pc_ad
+##.widget_st_custom_html_ad_widget
 ##.widget_swell_ad_widget
 ##.widget_tsnc_ad_custom_html
 ##.widget_tsnc_ads_custom_html
-##.yahoo_ad
+##.wipe-ad-div-class
 ##.ys-ad-content
-##a[href^="http://ad2.trafficgate.net/"]
+##a[href*="ams.exad.jp/"] > img
+##a[href^="http://abroadabc.com/index.php"]
+##a[href^="https://nxcount.com/AdClick/"][target="_blank"]
+##a[href^="https://preaf.jp/pa.do"] > img
+##a[href^="https://www.tenshilover.jp/product/"] > img
 ##div[class][data-index][style^="float: none; margin"]
+##div[class$="-adlabel"]
 ##div[class^="_taxel_ad_article_"]
-##div[class^="google-2ad"]
+##div[class^="insentense-adsense"]
 ##div[id^="active_overlay"]
-##div[id^="post-"][class*="post-"] > div[id*="-"][class*="%e"]
+##div[id^="JP_"][style]
+##iframe.lazyloaded[data-src^="https://ad.jp.ap.valuecommerce.com/"]
+##iframe[id^="IFTG"]
 !
+##.plugin-freearea > div[id^="msmaflink"]
+##.plugin-freearea a[href*="al.dmm.co"]
+##.plugin-freearea a[href*="amazon.co.jp"]
+##.plugin-freearea a[href*="e-nls.com/access.php"]
+##.plugin-memo > .side > a[href*="al.dmm.co"]
+##.plugin-memo > .side > a[href*="amazon.co.jp/exec/"]
+##.plugin-memo > .side > a[href*="e-nls.com/access.php"]
+##.plugin-memo > .side > a[href^="https://affiliate.suruga-ya.jp"]
+##.t_b > a[href^="https://hb.afl.rakuten.co.jp"]
+##.t_b > div > a[href^="https://al.dmm.co"]
+##.t_b ~ .amazon
+##.t_b ~ a[href^="https://amzn.to"]
+##.t_b ~ a[href^="https://hb.afl.rakuten.co.jp"]
+##.t_b ~ a[href^="https://www.amazon.co.jp"]
+##.t_b ~ div > a[href^="https://al.dmm.co"]
+##.t_b ~ div > a[href^="https://www.amazon.co.jp"]
+##.textwidget a[href^="https://pcmax.jp/lp/?ad_id="] > img
+##.widget_custom_html > .custom-html-widget > a[href^="https://www.e-nls.com/access.php"]
+!
+! NOTE: placeholders on iOS
+! Usually, IFRAME and IMG leftovers, which cannot be collapced like with browser extensions
+!#if (adguard_ext_safari || adguard_app_ios)
+##iframe[src^="https://go.mnaspm.com/"]
+##iframe[src^="https://ad.duga.jp/"]
+##img[src*="a8.net/"]
+##iframe[src^="https://ads.mediams.mb.softbank.jp/"]
+##iframe[src^="https://gallerieshub.com/"]
+##iframe[src^="https://rcm-fe.amazon-adsystem.com/"]
+!#endif
+!+ PLATFORM(windows, mac, android)
+##html > body .csw-content-container > div.ise-ad:not(#style_important1):not(#style_important2)
 ! uBO specific
 !#if (ext_ublock)
+*###ad_inview_area
+*###gStickyAd
 *##._popIn_recommend_article_ad
-*##.interstitial-ad
-*##.ise-ad.csw-content-box
-*##div[class^="_taxel_ad_article_"]
+*##._popIn_recommend_article_ad_reserved
+*##body .interstitial-ad
+*##.ise-ad
 *##div[id^="active_overlay"]
+*##div[id^="JP_"][style]
 !#endif

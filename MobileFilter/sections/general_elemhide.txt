@@ -4,6 +4,18 @@
 ! Good: ##.adv
 ! Bad: example.org##.adv (should be in specific.txt)
 !
+###mobile-adhesion:not(#style_important)
+##.gnt_xmst
+###ad-300x250_mid_mobile
+##amp-iframe[src^="https://ad.vidverto.io/"]
+##.sp_ad_box_top
+##.happy-header-mobile
+##.standard-article-vertical-ad
+##.header-ad-mobile
+##.under-player-ad-mobile
+##.california-sticky-footer-ad-container
+##.happy-under-player-mobile
+##.b-mobile-spots
 ###ad_inview_area
 !--- popular banner sizes ---
 ##img[width="320"][height="50"]
@@ -21,9 +33,12 @@
 ##amp-iframe[src^="https://widgets.outbrain.com"]
 ##.amp-ad-container
 ##.amp-ad container
-##amp-ad
 ##.amp_ad
 ##amp-sticky-ad
 !
-!+ PLATFORM(ios)
+!+ NOT_OPTIMIZED
+##amp-ad
+!+ NOT_OPTIMIZED
+###ad-300x250_mobile
+!+ NOT_OPTIMIZED
 ##body > style + div[id="ics"]
